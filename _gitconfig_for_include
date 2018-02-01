@@ -2,9 +2,16 @@
 # ------------------------------
 # [include]
 # path = ~/.dotfiles/_gitconfig_for_include
+#
+# <private>
 # [user]
 # name=matsu0228
 # email=
+#
+# <company>
+# [user]
+# name=matsu-at-nttr
+# email=matsuki@nttr.co.jp
 
 
 [color]
