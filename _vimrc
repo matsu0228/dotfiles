@@ -32,6 +32,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')
+  call dein#add('ConradIrwin/vim-bracketed-paste')
   "snipets
   call dein#add('Shougo/neocomplete')
   call dein#add('Shougo/neosnippet')

@@ -25,6 +25,7 @@ alias cdl='a=(`ls -1`) ; ls -1 | cat -n ; read b ; cd ${a[$b-1]}'
 alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 alias ml='vim -c MemoNew '
 alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
+alias vg='vagrant'
 
 
 # ls
@@ -65,6 +66,9 @@ alias dl='time aria2c -x10'
 # require: z
 alias j="z"
 
+# require:pandoc
+alias pandoc="pandoc_with_github"
+
 # for mac
 alias f="open ."
 
@@ -104,4 +108,7 @@ alias rs='python manage.py runserver 0.0.0.0:8000'
 # golan
 #--------------------------------------
 alias sg='source ~/.gvm/scripts/gvm'
-
+# local env
+alias gi='gvm use go1.9.1; gvm pkgset use go-tutorial; gvm list; gvm pkgset list'
+alias gcd='cd  ~/go-tutorial/src/github.com/matsu0228/go-cli'
+alias gcb='go run main.go'

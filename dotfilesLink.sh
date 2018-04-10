@@ -11,6 +11,10 @@ ln -sf ~/.dotfiles/_vimrc       ~/.vimrc
 cp -r ~/.dotfiles/_vim/doc      ~/.vim/
 cp -r ~/.dotfiles/_vim/syntax   ~/.vim/
 
+# for pandoc
+# https://github.com/matsu0228/tools/tree/master/pandoc
+ln -s ~/.dotfiles/_pandoc ~/.pandoc
+
 # for bash
 mkdir ~/.bash
 ln -sf ~/.dotfiles/_bash_conf/ ~/.bash/conf

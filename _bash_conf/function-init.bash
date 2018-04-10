@@ -57,6 +57,14 @@ function jj () {
   fi
 }
 
+# required pandoc + lynx (+ ~/.pandoc/)
+rmd () {
+  pandoc $1 -s --self-contained -t html5 -c github.css | lynx -stdin
+}
+pandoc_with_github () {
+  pandoc $1 -s --self-contained -t html5 -c github.css 
+}
+
 #
 # ---------------------------------------
 function cleanup () {
