@@ -1,6 +1,21 @@
 # $bash_conf/function-init.bash # 関数の設定
 # --------------------------------------
 
+
+# column のオプション：
+#     -s, : 区切り文字をコンマに変更（デフォルトはスペース）．
+#     -t : 列ごとに並ぶように整形する．列が等幅になるようにスペースを挿入．
+# less のオプション：
+#     -#2 : 左右のカーソルキーで画面をスクロールする量．デフォルトだと画面表示の半分ごとにスクロールされるので，閲覧しにくい．
+#     -S : 折り返しをしない．
+function cless (){
+  cat $1 | column -s, -t | less -#2 -N -S
+}
+function tless {
+  cat $1 | column  -t | less -#2 -N -S
+}
+
+
 # color
 function parse_git_branch {
     type git > /dev/null 2>&1 | grep -i 'not found'
