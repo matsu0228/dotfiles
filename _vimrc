@@ -83,24 +83,12 @@ let g:airline_powerline_fonts = 1
 
 " load config
 runtime! config/init/*.vim
-" go
-augroup PrevimSetti=ngs
-  autocmd!
-  autocmd BufNewFile,BufRead *.{go} set filetype=go
-augroup END
-" markdown
-augroup PrevimSetti=ngs
-  autocmd!
-  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-let g:memolist_path = "~/Documents/2017"
-let g:memolist_memo_suffix = "md"
-let g:memolist_template_dir_path = "~/.vim/config/memolist"
-let g:memolist_memo_date = "%y%m%d"
+
 " Emmet ( <LEAD> , )
 let g:user_emmet_leader_key='<c-e>'
 " indent
 set tabstop=2 shiftwidth=2 expandtab
+colorscheme default
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'Normal']
