@@ -16,3 +16,12 @@
 
 [color]
   ui = true
+
+# for ghq
+[ghq]
+    root = ~/.ghq
+    root = ~/go/src # Replace your $GOPATH/src
+[alias]
+    get = !ghq get -p
+    list = !ghq list
+    root = "!exec $SHELL ; :"

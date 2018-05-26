@@ -75,6 +75,7 @@ alias f="open ."
 # front-end
 # --------------------------------------
 alias nr='npm run-script'
+
 # git
 # --------------------------------------
 alias gc='git commit'
@@ -97,6 +98,12 @@ alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gcp='git cherry-pick'
 alias gsb='git show-branch --current'
+
+# ghq
+# --------------------------------------
+alias gogp='cd $GOPATH/src/$(ghq list --full-path | grep $GOPATH | cut -d "/" -f 6,7,8 | peco)'
+alias gp='cd $(ghq root)/$(ghq list --full-path | grep -v $GOPATH | cut -d "/" -f 5,6,7 | peco)'
+alias hgp='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # django
 # --------------------------------------
