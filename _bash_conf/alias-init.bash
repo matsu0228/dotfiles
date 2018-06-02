@@ -66,6 +66,9 @@ alias dl='time aria2c -x10'
 # require: z
 alias j="z"
 
+# # require: poppler
+# alias preview='pdftotext -nopgbrk -layout $1 -|less'
+
 # require:pandoc
 alias pandoc="pandoc_with_github"
 
