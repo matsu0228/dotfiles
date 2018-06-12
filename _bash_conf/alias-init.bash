@@ -111,3 +111,7 @@ alias sd='source deactivate'
 alias venv='source ./myvenv/bin/activate'
 alias mkvenv='python3 -m venv myvenv'
 alias rs='python manage.py runserver 0.0.0.0:8000'
+
+# infla
+# --------------------------------------
+alias ap='ansible-playbook'
