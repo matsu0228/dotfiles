@@ -40,8 +40,10 @@ if dein#load_state(s:dein_dir)
   " front-end
   call dein#add('mattn/emmet-vim')
   call dein#add('majutsushi/tagbar')
-  call dein#add('othree/yajs')
   call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('othree/yajs')  " syntax for js
+  call dein#add('pangloss/vim-javascript') " lint/fmt for js
+  " call dein#add('w0rp/ale') " Asynchronous Lint Engine: use for eslint
   " call dein#add('mtscout6/syntastic-local-eslint')
   " markdown
   call dein#add('plasticboy/vim-markdown')

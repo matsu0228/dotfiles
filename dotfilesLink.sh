@@ -11,6 +11,12 @@ ln -sf ~/.dotfiles/_vimrc       ~/.vimrc
 cp -r ~/.dotfiles/_vim/doc      ~/.vim/
 cp -r ~/.dotfiles/_vim/syntax   ~/.vim/
 
+
+# # for frontend: js standard
+# #  not good for jQuery..
+# npm install standard --global
+# standard --version
+
 # for pandoc
 # https://github.com/matsu0228/tools/tree/master/pandoc
 ln -s ~/.dotfiles/_pandoc ~/.pandoc
