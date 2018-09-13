@@ -28,7 +28,7 @@ function proml {
   prompt_str="[$(whoami)@$(hostname | cut -d'.' -f1):${pwd_str}$(parse_git_branch)]"
   cols=$(expr $(tput cols) - ${#prompt_str})
   margin=$(printf "%${cols}s" "[$(date +'%Y-%m-%d %H:%M:%S')]" | cut -d'[' -f1)
-  PS1="[${COLOR_LIGHT_RED}\u${COLOR_NC}${COLOR_LIGHT_GRAY}@\h${COLOR_NC}:${COLOR_LIGHT_CYAN}\w${COLOR_NC}${COLOR_LIGHT_BLUE}$(parse_git_branch)${COLOR_NC}]${margin}${COLOR_LIGHT_GREEN}[$(date +"%Y-%m-%d") \t]${COLOR_NC}\n$ "
+  PS1="[${COLOR_LIGHT_RED}\u${COLOR_NC}@${COLOR_LIGHT_PURPLE}\h${COLOR_NC}:${COLOR_LIGHT_CYAN}\w${COLOR_NC}${COLOR_LIGHT_BLUE}$(parse_git_branch)${COLOR_NC}]${margin}${COLOR_LIGHT_GREEN}[$(date +"%Y-%m-%d") \t]${COLOR_NC}\n$ "
 }
 function cd_proml {
     \cd $1
