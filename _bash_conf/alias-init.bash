@@ -26,7 +26,7 @@ alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 alias ml='vim -c MemoNew '
 alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
 alias vg='vagrant'
-
+alias rreplace='echo "grep -l /''BefStr/'' ./* | xargs sed -i.bak -e /''s/BefStr/AftStr/g/''"'
 
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
@@ -84,6 +84,7 @@ alias nr='npm run-script'
 alias gc='git commit'
 alias ga='git add'
 alias gd='git diff'
+alias gft='git fetch'
 alias gll='git pull'
 alias glr='git pull --recursive'
 alias gps='git push'
