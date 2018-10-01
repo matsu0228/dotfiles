@@ -26,7 +26,7 @@ alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 alias ml='vim -c MemoNew '
 alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
 alias vg='vagrant'
-alias rreplace='echo "grep -l /''BefStr/'' ./* | xargs sed -i.bak -e /''s/BefStr/AftStr/g/''"'
+alias rreplace='echo "ls ./*.go  | xargs sed -i.bak -e \"s/\.\.\/testdata/testdata/g\""'
 
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
@@ -74,6 +74,42 @@ alias pandoc="pandoc_with_github"
 
 # for mac
 alias f="open ."
+# Google search from terminal
+# --------------------------------------
+goo(){
+    if [ $(echo $1 | egrep "^-[cfs]$") ]; then
+        local opt="$1"
+        shift
+    fi
+    local url="https://www.google.co.jp/search?q=${*// /+}"
+    local app="/Applications"
+    local g="${app}/Google Chrome.app"
+    local c="${app}/Google Chrome Canary.app"
+    local f="${app}/Firefox.app"
+    local s="${app}/Safari.app"
+    case ${opt} in
+        "-g")   open "${url}" -a "$g";;
+        "-f")   open "${url}" -a "$f";;
+        "-s")   open "${url}" -a "$s";;
+        *)      open "${url}";;
+    esac
+}
+# Google Calender
+# --------------------------------------
+calender(){
+    local url="https://calendar.google.com/calendar/r"
+    local app="/Applications"
+    local g="${app}/Google Chrome.app"
+    local c="${app}/Google Chrome Canary.app"
+    local f="${app}/Firefox.app"
+    local s="${app}/Safari.app"
+    case ${opt} in
+        "-g")   open "${url}" -a "$g";;
+        "-f")   open "${url}" -a "$f";;
+        "-s")   open "${url}" -a "$s";;
+        *)      open "${url}";;
+    esac
+}
 
 # front-end
 # --------------------------------------
