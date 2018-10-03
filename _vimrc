@@ -93,8 +93,9 @@ let g:user_emmet_leader_key='<c-e>'
 " indent
 set tabstop=2 shiftwidth=2 expandtab
 colorscheme default
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
+"  for python: indent hylight
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_auto_colors = 0
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'Normal']
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
