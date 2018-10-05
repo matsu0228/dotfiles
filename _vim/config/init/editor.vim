@@ -94,7 +94,9 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
-  endif
+endif
 
-  "set snippet file dir
-  let g:neosnippet#snippets_directory='~/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets,~/.vim/snippets'
+"set snippet file dir
+let g:neosnippet#snippets_directory='~/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets,~/.vim/snippets'
+
+:let mapleader = "\<Space>"
