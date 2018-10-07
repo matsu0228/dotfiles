@@ -27,6 +27,7 @@ alias ml='vim -c MemoNew '
 alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
 alias vg='vagrant'
 alias rreplace='echo "ls ./*.go  | xargs sed -i.bak -e \"s/\.\.\/testdata/testdata/g\""'
+alias cdg='cd $GOPATH/src/github.com/matsu0228'
 
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac

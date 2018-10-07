@@ -37,6 +37,10 @@ call submode#map('bufmove', 'n', '', '<', '<C-w><')
 call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 
+" sonictemplate-vim
+map <S-t> :Template<Space>
+
+
 " comment out
 " --------------------------------------
 nmap <C-K> <Plug>(caw:hatpos:toggle)
