@@ -156,3 +156,9 @@ alias rs='python manage.py runserver 0.0.0.0:8000'
 # infla
 # --------------------------------------
 alias ap='ansible-playbook'
+
+# mac
+# --------------------------------------
+# convert heif to jpeg
+# ex) htj input.heic --out output.jpg
+alias htj='sips --setProperty format jpeg'
