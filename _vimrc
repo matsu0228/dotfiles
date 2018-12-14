@@ -32,7 +32,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')
-  call dein#add('ludovicchabant/vim-gutentags')
+  " call dein#add('ludovicchabant/vim-gutentags')
   call dein#add('ConradIrwin/vim-bracketed-paste')
   call dein#add('mattn/sonictemplate-vim') " template
   "snipets
