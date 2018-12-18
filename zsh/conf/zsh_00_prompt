@@ -1,0 +1,78 @@
+# $bash_conf/prompt-init.bash   # プロンプトの設定
+# ------------------------------------------
+
+export MANPATH=/opt/local/share/man:/opt/local/man:$MANPATH
+export LANG='ja_JP.UTF-8'
+export LC_ALL='ja_JP.UTF-8'
+export LC_MESSAGES='ja_JP.UTF-8'
+export LC_CTYPE=C
+
+
+### 先方予測機能を有効に設定
+# autoload predict-on
+# predict-on
+
+# カラー設定用の環境変数設定
+export LS_COLORS='di=34;01:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+
+# 補完候補のカーソル選択を有効にする設定
+zstyle ':completion:*:default' menu select=1
+
+
+# prompt for zsh
+# ---------------------------------
+
+
+# git設定
+RPROMPT_SETTING="%{${fg[blue]}%}[%~]%{${reset_color}%}"
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+# zstyle ':vcs_info:*' formats '(%s)[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+RPROMPT=$RPROMPT_SETTING'${vcs_info_msg_0_}'
+
+# # vcs_infoを読み込み
+# autoload -Uz vcs_info
+# # vcs_info_msg_0_変数をどのように表示するかフォーマットの指定
+# ## デフォルトのフォーマット
+# ### %s: どのバージョン管理システムを使っているか（git, svnなど）
+# ### %b: ブランチ名
+# zstyle ':vcs_info:*' formats '(%s)[%b]'
+# ## 特別な状態（mergeでコンフリクトしたときなど）でのフォーマット
+# ### %a: アクション名（merge, rebaseなど）
+# zstyle ':vcs_info:*' actionformats '(%s)[%b|%a]'
+#
+# # プロンプトが表示される毎にバージョン管理システムの情報を取得
+# ## precmd: プロンプトが表示される毎に実行される関数
+# ## vcs_info: バージョン管理システムから情報を取得
+# precmd () { vcs_info }
+#
+# # 右プロンプトに表示
+# ## prompt_subst: プロンプトを表示する際に変数を展開するオプション
+# setopt prompt_subst
+# ## vcs_info_msg_0_: バージョン管理システムの情報
+# ## RPROMPT: 右プロンプトに情報を表示するときの環境変数
+# RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
+
+# case "${TERM}" in
+# kterm*|xterm|mlterm)
+#   precmd() {
+#     echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
+#   }
+#   ;;
+# esac
+
+# PATH
+# ------------------------------------
+PATH="$PATH":/usr/local/src/tree-tagger/cmd
+PATH="$PATH":/usr/local/src/tree-tagger/bin
+export PATH=$PATH
+
+# less editor
+export VISUAL='vim'

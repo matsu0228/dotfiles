@@ -1,0 +1,5 @@
+# load settings
+#
+for conf in $HOME/.zsh/conf/zsh_*; do
+    source ${conf};
+done
