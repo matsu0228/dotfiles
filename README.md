@@ -9,8 +9,8 @@ git clone https://github.com/matsu0228/dotfiles.git ~/.dotfiles
 
 - set symbolic link
 ```bash
-chmod 755 ~/.dotfiles/dotfilesLink.sh
-~/.dotfiles/dotfilesLink.sh
+# chmod 755 ~/.dotfiles/setup.sh
+~/.dotfiles/setup.sh
 
 # then set bash/conf in your ~/.bashrc. please see detail at `dotfilesLink.sh `
 ```

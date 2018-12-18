@@ -1,4 +1,7 @@
 
+# setting for prezo
+# --------------------------------
+
 # https://github.com/sorin-ionescu/prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
