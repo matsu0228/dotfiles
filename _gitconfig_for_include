@@ -1,0 +1,27 @@
+# $ vim ~/.gitconfig
+# ------------------------------
+# [include]
+# path = ~/.dotfiles/_gitconfig_for_include
+#
+# <private>
+# [user]
+# name=matsu0228
+# email=
+#
+# <company>
+# [user]
+# name=matsu-at-nttr
+# email=matsuki@nttr.co.jp
+
+
+[color]
+  ui = true
+
+# for ghq
+[ghq]
+    root = ~/.ghq
+    root = ~/go/src # Replace your $GOPATH/src
+[alias]
+    get = !ghq get -p
+    list = !ghq list
+    root = "!exec $SHELL ; :"

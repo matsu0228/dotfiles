@@ -1,0 +1,5 @@
+set completion-ignore-case on
+
+# none-bell
+set bell-style none
+
