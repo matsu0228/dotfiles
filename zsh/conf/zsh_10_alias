@@ -160,3 +160,8 @@ alias ap='ansible-playbook'
 # alias-sample : docker image ls | grep none | awk '{print $3}' | xargs -i echo {}
 alias rreplace='echo "ls ./*.go  | xargs sed -i.bak -e \"s/\.\.\/testdata/testdata/g\""'
 
+
+# rewrite cd of "cd" and "ls"
+function cd(){
+    builtin cd $@ && ls;
+}
