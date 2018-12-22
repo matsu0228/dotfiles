@@ -23,23 +23,34 @@ let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 " プラグイン読み込み＆キャッシュ作成 
 " let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/.dein.toml'
 if dein#load_state(s:dein_dir)
+  "
+  " General
+  " -------------------------------------
   call dein#begin(expand('~/.vim/dein'))
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('tyru/caw.vim')
-  call dein#add('ludovicchabant/vim-gutentags')
-  call dein#add('ConradIrwin/vim-bracketed-paste')
-  call dein#add('mattn/sonictemplate-vim') " template
-  "snipets
-  call dein#add('Shougo/neocomplete')
-  call dein#add('Shougo/neosnippet')
-  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('tyru/caw.vim')                     " for comment out
+  call dein#add('vim-scripts/YankRing.vim')         " テキストコピーの履歴参照: <C-p>, <C-n>
+  call dein#add('ConradIrwin/vim-bracketed-paste')  " :set paste /no indent when you paste
+  call dein#add('mattn/sonictemplate-vim')          " template
+  "
+  " snipets
+  " call dein#add('Shougo/neocomplete')             " 補完機能 required lua
+  call dein#add('Shougo/neosnippet')                " vim snipets
+  call dein#add('Shougo/neosnippet-snippets')       " snipetts set
+  " call dein#add('vim-syntastic/syntastic')          " 構文チェック. linterは別途追加が必要
+  call dein#add('tpope/vim-fugitive.git')           " git on vim. :Gstatus
+  call dein#add('tpope/vim-surround')               " edit surround. ex: cs'|
+  " call dein#add('vim-airline/vim-airline')
+  " call dein#add('vim-airline/vim-airline-themes')   " vim color theme
+  " call dein#add('junegunn/fzf.vim')                 " fuzy search?
+  " call dein#add('ludovicchabant/vim-gutentags')     " take care for tags
+  "
   " front-end
+  " -------------------------------------
   call dein#add('mattn/emmet-vim')
   call dein#add('majutsushi/tagbar')
   call dein#add('hail2u/vim-css3-syntax')
@@ -47,23 +58,50 @@ if dein#load_state(s:dein_dir)
   call dein#add('pangloss/vim-javascript') " lint/fmt for js
   " call dein#add('w0rp/ale') " Asynchronous Lint Engine: use for eslint
   " call dein#add('mtscout6/syntastic-local-eslint')
-  " markdown
+  " " markdown
+  " " -------------------------------------
+  " call dein#add('plasticboy/vim-markdown')
+  " call dein#add('glidenote/memolist.vim')
+  "
+  " python
+  " -------------------------------------
   call dein#add('plasticboy/vim-markdown')
   call dein#add('glidenote/memolist.vim')
-  " for python
   call dein#add('davidhalter/jedi-vim')
   call dein#add('scrooloose/syntastic')
   call dein#add('Vimjas/vim-python-pep8-indent')
+  "TODO: UltiSnips requires py >= 2.7 or py3
+  " call dein#add('SirVer/ultisnips') " ff := fmt.Printf(), lf := log.Printf()
   " call dein#add('andviro/flake8-vim')
+  "
   " go
+  " -------------------------------------
   call dein#add('fatih/vim-go')
   call dein#add('Shougo/unite-outline')
   call dein#add('AndrewRadev/splitjoin.vim') " structを複数行に
-  "TODO: UltiSnips requires py >= 2.7 or py3
-  " call dein#add('SirVer/ultisnips') " ff := fmt.Printf(), lf := log.Printf()
-  call dein#add('ctrlpvim/ctrlp.vim')  " for :GoDecls.  ]] or [[
+  call dein#add('ctrlpvim/ctrlp.vim')        " for :GoDecls.  ]] or [[
+  "Main command list
+  " <leader> i
+  " <leader> r
+  " :A
+  " :GoImpl
+  " :GoFmt
+  "
+  " gd / ctrl-]  -> :GoDef
+  " ctrl-t       -> :GoDefPop
+  "
+  " ]]           -> jump to next function
+  " [[           -> jump to previous function
+  "
+  " Gs           -> split/join struct
 
+  "Additionls
+  " :GoRename
+  " :GoPlay
+
+  "
   " for window
+  " -------------------------------------
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('kana/vim-submode')
   call dein#add('Shougo/vimproc', {
