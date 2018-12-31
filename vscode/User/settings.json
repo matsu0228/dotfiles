@@ -1,0 +1,25 @@
+{
+    // general
+    // ------------------------------------
+    // スニペットを候補の上部に表示する
+    "editor.snippetSuggestions": "top",
+    // プレフィックスが一致する場合はスニペットを挿入する
+    "editor.tabCompletion": true,
+    "workbench.colorTheme": "Monokai",
+    "files.eol": "\n",
+    
+    // vim
+    // ------------------------------------
+    //無名レジスタとクリップボードを同期する
+    "vim.useSystemClipboard": true,
+    //検索結果をハイライトする
+    "vim.hlsearch": true,
+    // カーソル配下の文字列を検索する
+    "vim.visualstar": true,
+    "vim.leader": "<space>",
+
+    // golang
+    // ------------------------------------
+    "go.lintTool": "gometalinter",
+    "go.lintFlags": ["--enable-all", "--new"],
+}
