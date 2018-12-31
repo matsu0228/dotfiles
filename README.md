@@ -10,6 +10,7 @@ git clone https://github.com/matsu0228/dotfiles.git ~/.dotfiles
 - set symbolic link
 ```bash
 # chmod 755 ~/.dotfiles/setup.sh
+~/.dotfiles/install.sh
 ~/.dotfiles/setup.sh
 
 # then set bash/conf in your ~/.bashrc. please see detail at `dotfilesLink.sh `
@@ -19,4 +20,3 @@ git clone https://github.com/matsu0228/dotfiles.git ~/.dotfiles
 ## require
 
 - please use vim8.0 or more
-- [universal-ctags](https://github.com/universal-ctags/ctags) 

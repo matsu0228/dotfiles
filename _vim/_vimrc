@@ -36,6 +36,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-scripts/YankRing.vim')         " テキストコピーの履歴参照: <C-p>, <C-n>
   call dein#add('ConradIrwin/vim-bracketed-paste')  " :set paste /no indent when you paste
   call dein#add('mattn/sonictemplate-vim')          " template
+  call dein#add('twitvim/twitvim')
   "
   " snipets
   " call dein#add('Shougo/neocomplete')             " 補完機能 required lua
@@ -65,8 +66,6 @@ if dein#load_state(s:dein_dir)
   "
   " python
   " -------------------------------------
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('glidenote/memolist.vim')
   call dein#add('davidhalter/jedi-vim')
   call dein#add('scrooloose/syntastic')
   call dein#add('Vimjas/vim-python-pep8-indent')
