@@ -1,4 +1,4 @@
-# How to use
+# Dotfiles
 
 ## install
 - please fork this repo to use your shell.
@@ -9,8 +9,9 @@ git clone https://github.com/matsu0228/dotfiles.git ~/.dotfiles
 
 - set symbolic link
 ```bash
-chmod 755 ~/.dotfiles/dotfilesLink.sh
-~/.dotfiles/dotfilesLink.sh
+# chmod 755 ~/.dotfiles/setup.sh
+~/.dotfiles/install.sh
+~/.dotfiles/setup.sh
 
 # then set bash/conf in your ~/.bashrc. please see detail at `dotfilesLink.sh `
 ```
@@ -19,4 +20,3 @@ chmod 755 ~/.dotfiles/dotfilesLink.sh
 ## require
 
 - please use vim8.0 or more
-- [universal-ctags](https://github.com/universal-ctags/ctags) 
