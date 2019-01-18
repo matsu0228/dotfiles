@@ -7,7 +7,7 @@ git clone https://github.com/Shougo/dein.vim.git \
 
 # for vim
 ln -sf ~/.dotfiles/_vim/config  ~/.vim/config
-ln -sf ~/.dotfiles/_vimrc       ~/.vimrc
+ln -sf ~/.dotfiles/_vim/_vimrc       ~/.vimrc
 cp -r ~/.dotfiles/_vim/doc      ~/.vim/
 cp -r ~/.dotfiles/_vim/syntax   ~/.vim/
 
