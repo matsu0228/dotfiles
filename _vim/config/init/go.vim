@@ -1,7 +1,10 @@
 " go: (vim-go) https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
 
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+
 " auto :GoInfo
-" let g:go_auto_type_info = 1
+let g:go_auto_type_info = 1
 " auto :GoSameIds
 " let g:go_auto_sameids = 1
 
@@ -16,7 +19,7 @@ augroup GoSetting
   " auto lint
   autocmd BufNewFile,BufRead *.{go} set filetype=go
   autocmd BufWritePre *.{go} :GoImports
-  autocmd BufWritePre *.{go} :GoMetaLinter
+  "autocmd BufWritePre *.{go} :GoMetaLinter  "autosaveに移譲
   " go shortcut
   autocmd FileType go nmap <leader>r  <Plug>(go-run)
   " :GoInfo
