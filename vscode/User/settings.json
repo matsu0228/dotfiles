@@ -28,5 +28,9 @@
   // golang
   // ------------------------------------
   "go.lintTool": "gometalinter",
-  "go.lintFlags": ["--enable-all", "--new"]
+  "go.lintFlags": [
+    "--enable-all",
+    "--new"
+  ],
+  "window.zoomLevel": 0
 }
