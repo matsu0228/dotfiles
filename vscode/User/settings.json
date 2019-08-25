@@ -32,5 +32,8 @@
     "--enable-all",
     "--new"
   ],
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
