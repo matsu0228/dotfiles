@@ -48,6 +48,9 @@ bind '"\C-n": history-search-forward'
 # --------------------------------------
 shopt -s nocaseglob
 
+export XDG_CONFIG_HOME="~/.config"
+export XDG_CACHE_HOME="~/.cache"
+
 # PATH
 # ------------------------------------
 PATH="$PATH":/usr/local/src/tree-tagger/cmd

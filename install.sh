@@ -24,6 +24,19 @@ if ! type zsh >/dev/null 2>&1; then
 fi
 
 
+if [ $OS eq 'Linux' ]; then
+  
+echo -e "  
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+
+mv ./nvim.appimage
+sudo ln -s /usr/local/bin/nvim.appimage  /usr/local/bin/nvim
+"
+
+fi
+
 if ! type peco >/dev/null 2>&1; then
   echo -e "
   pecoをインストールしてください
