@@ -30,13 +30,12 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('scrooloose/nerdtree')
+  call dein#add('cocopon/iceberg.vim')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')                     " for comment out
   call dein#add('vim-scripts/YankRing.vim')         " テキストコピーの履歴参照: <C-p>, <C-n>
   call dein#add('ConradIrwin/vim-bracketed-paste')  " :set paste /no indent when you paste
   call dein#add('mattn/sonictemplate-vim')          " template
-  call dein#add('twitvim/twitvim')
   "
   " snipets
   " call dein#add('Shougo/neocomplete')             " 補完機能 required lua
@@ -143,7 +142,6 @@ runtime! config/init/*.vim
 let g:user_emmet_leader_key='<c-e>'
 " indent
 set tabstop=2 shiftwidth=2 expandtab
-colorscheme default
 "  for python: indent hylight
 " let g:indent_guides_enable_on_vim_startup = 1
 " let g:indent_guides_auto_colors = 0
@@ -155,6 +153,9 @@ let g:terraform_fmt_on_save = 1
 
 " vim-flake8
 " autocmd BufWritePost *.py call Flake8()
+
+" colorscheme default
+colorscheme iceberg
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 "----------------------------------------------
