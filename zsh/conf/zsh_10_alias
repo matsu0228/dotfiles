@@ -14,7 +14,7 @@ alias ..7='cd ../../../../../../../'
 alias ..8='cd ../../../../../../../../'
 alias ff='find . -type f -name'
 alias fd='find . -type d -name'
-alias grep='grep --color=always --no-messages --binary-files=without-match'
+# alias grep='grep --color=always' # --no-messages' # --binary-files=without-match'
 alias grepf='grep --color=always --with-filename --no-messages --binary-files=without-match'
 # alias less='less -N -M'
 alias hn='head -n'
@@ -147,14 +147,14 @@ alias gsb='git show-branch --current'
 # ghq
 # --------------------------------------
 alias gogp='cd $GOPATH/src/$(ghq list --full-path | grep $GOPATH | cut -d "/" -f 6,7,8 | peco)'
-alias gp='cd $(ghq root)/$(ghq list --full-path | grep -v $GOPATH | cut -d "/" -f 5,6,7 | peco)'
+alias gp='cd $(ghq root)/$(ghq list --full-path  | cut -d "/" -f 5,6,7 | peco)'
 alias hgp='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # django
 # --------------------------------------
 alias sd='source deactivate'
-alias venv='source ./myvenv/bin/activate'
-alias mkvenv='python3 -m venv myvenv'
+alias venv='source ./env/bin/activate'
+alias mkvenv='python3 -m venv env'
 alias rs='python manage.py runserver 0.0.0.0:8000'
 
 # infla
