@@ -1,0 +1,30 @@
+
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+# zplug setup
+# -----------------------------
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "mafredri/zsh-async"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+# コマンドの履歴機能
+# 履歴ファイルの保存先
+HISTFILE=$HOME/.zsh_history
+# メモリに保存される履歴の件数
+HISTSIZE=10000
+# HISTFILE で指定したファイルに保存される履歴の件数
+SAVEHIST=10000
+# Then, source plugins and add commands to $PATH
+zplug load
