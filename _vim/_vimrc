@@ -1,4 +1,3 @@
-:syntax on
 set encoding=utf-8
 
 " 一旦ファイルタイプ関連を無効化する
@@ -29,7 +28,15 @@ if dein#load_state(s:dein_dir)
   call dein#begin(expand('~/.vim/dein'))
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
-  call dein#add('scrooloose/nerdtree')
+  " NOTE: use toml becase toml makes auto delete plugin possible
+  " delete plugins manually
+  "
+  " :call map(dein#check_clean(), "delete(v:val, 'rf')")
+  " :call dein#recache_runtimepath()
+  "
+  " call dein#load_toml('~/.vim/nvim/dein.toml', {'lazy': 0})
+
+  " call dein#add('scrooloose/nerdtree')
   call dein#add('cocopon/iceberg.vim')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')                     " for comment out
@@ -155,6 +162,7 @@ let g:terraform_fmt_on_save = 1
 " autocmd BufWritePost *.py call Flake8()
 
 " colorscheme default
+set background=dark
 colorscheme iceberg
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
@@ -165,7 +173,7 @@ filetype on
 "----------------------------------------------
 set mouse=niv
 set clipboard=unnamed,autoselect
-let g:NERDTreeDirArrows=0
+" let g:NERDTreeDirArrows=0
 
 " grep検索
 nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
@@ -176,3 +184,4 @@ nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
 
 " indent
 filetype plugin indent on
+syntax enable

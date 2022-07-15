@@ -25,6 +25,7 @@ augroup GoSetting
   "autocmd BufWritePre *.{go} :GoMetaLinter  "autosaveに移譲
   " go shortcut
   autocmd FileType go nmap <leader>r  <Plug>(go-run)
+  autocmd FileType go nmap <leader>d  <Plug>(go-def)
   " :GoInfo
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
   " for :GoAlternaitve  :A, :AV, :AS, :AT

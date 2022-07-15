@@ -22,6 +22,11 @@ zstyle ':completion:*:default' menu select=1
 # prompt for zsh
 # ---------------------------------
 
+# for qh
+if type gh > /dev/null 2>&1; then
+  eval "(gh completion -s zsh > /dev/null)"
+fi
+
 
 # git設定
 RPROMPT_SETTING="%{${fg[blue]}%}[%~]%{${reset_color}%}"

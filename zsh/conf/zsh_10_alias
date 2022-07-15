@@ -130,9 +130,10 @@ alias gdn='git diff --name-status'
 alias gl="git log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso"
 alias gb='git branch'
 alias gco='git checkout'
+alias gcp='git cherry-pick'
 alias gs='git status'
 alias gbdm='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
-alias gbdmo='git branch -r --merged master | grep -v -e master -e develop | sed -e "s% *origin/%%" | xargs -I% git push --delete origin %'
+alias gbdmo='git branch -r --merged master | grep -v -e master -e develop -e main | sed -e "s% *origin/%%" | xargs -I% git push --delete origin %'
 
 alias glr='git pull --recursive'
 alias gcom='git checkout master'

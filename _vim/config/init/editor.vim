@@ -41,16 +41,16 @@ set autoread
 "------------------------------------------------
 "<C-e>でNERDTreeをオンオフ。いつでもどこでも。
 "http://blog.livedoor.jp/kumonopanya/archives/51048805.html
- nmap <silent> <C-e>      :NERDTreeToggle<CR>
- vmap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
- omap <silent> <C-e>      :NERDTreeToggle<CR>
+" nmap <silent> <C-e>      :NERDTreeToggle<CR>
+" vmap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
+" omap <silent> <C-e>      :NERDTreeToggle<CR>
 " imap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
- cmap <silent> <C-e> <C-u>:NERDTreeToggle<CR>
- autocmd VimEnter * if !argc() | NERDTree | endif
- autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endi
- let g:NERDTreeShowHidden=1
- let g:NERDTreeHighlightCursorline=1
- let g:NERDTreeMinimalUI=1
+" cmap <silent> <C-e> <C-u>:NERDTreeToggle<CR>
+" autocmd VimEnter * if !argc() | NERDTree | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endi
+" let g:NERDTreeShowHidden=1
+" let g:NERDTreeHighlightCursorline=1
+" let g:NERDTreeMinimalUI=1
 
 " 全角スペースの表示
 "----------------------------------------
@@ -78,13 +78,13 @@ endif
 
 " vim linter
 "----------------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " snipet
 " ---------------------------------------------
