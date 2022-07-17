@@ -25,9 +25,8 @@ alias up="cd ..; ls -l"
 alias cdl='a=(`ls -1`) ; ls -1 | cat -n ; read b ; cd ${a[$b-1]}'
 alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 alias ml='vim -c MemoNew '
-alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
-alias vg='vagrant'
-alias cdg='cd $GOPATH/src/github.com/matsu0228'
+# alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
+# alias cdg='cd $GOPATH/src/github.com/matsu0228'
 
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
@@ -112,9 +111,9 @@ calender(){
     esac
 }
 
-# front-end
-# --------------------------------------
-alias nr='npm run-script'
+# cache clear for mac
+# ref: https://support.apple.com/ja-jp/HT202516
+alias clear-dns='sudo killall -HUP mDNSResponder'
 
 # git
 # --------------------------------------
