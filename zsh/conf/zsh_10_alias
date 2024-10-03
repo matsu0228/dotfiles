@@ -170,3 +170,10 @@ alias rreplace='echo "ls ./*.go  | xargs sed -i.bak -e \"s/\.\.\/testdata/testda
 function cd(){
     builtin cd $@ && ls;
 }
+
+function update_SSH_AUTH_SOCK() {
+    SSH_DIR=$(ls /tmp | grep ssh- | sed -n 1p)
+    SSH_FILE=$(ls /tmp/$SSH_DIR | grep agent)
+    export SSH_AUTH_SOCK="/tmp/$SSH_DIR/$SSH_FILE"
+}
+alias usas=update_SSH_AUTH_SOCK

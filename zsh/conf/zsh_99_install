@@ -1,7 +1,7 @@
 
 # nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+#eval "$(nodenv init -)"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -13,11 +13,14 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
 
 # zplug setup
 # -----------------------------
-source ~/.zplug/init.zsh
+# zplug via brew
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
 zplug "zsh-users/zsh-history-substring-search"
 zplug "mafredri/zsh-async"
 zplug "zsh-users/zsh-syntax-highlighting"
