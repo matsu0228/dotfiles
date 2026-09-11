@@ -39,6 +39,13 @@ bash_conf=~/.bash/conf
 mkdir ~/.zsh
 ln -sf ~/.dotfiles/zsh/conf/     ~/.zsh/conf
 ln -sf ~/.dotfiles/zsh/zsh_init     ~/.zsh/.zsh_init
+ln -sf ~/.dotfiles/_config/herdr/config.toml     ~/.config/herdr/config.toml
+ln -sf ~/.dotfiles/_claude/CLAUDE.md   ~/.claude/
+ln -sf ~/.dotfiles/_claude/skills/     ~/.claude/skills
+ln -sf ~/.dotfiles/_claude/CLAUDE.md   ~/.agents/AGENT.md
+ln -sf ~/.dotfiles/_claude/skills/     ~/.agents/skills
+
+
 echo -e "you should write following in your ~/.zrc
 
 [ -f ~/.zsh/.zsh_init ] && source ~/.zsh/.zsh_init
