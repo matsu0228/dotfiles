@@ -23,6 +23,12 @@ if ! type zsh >/dev/null 2>&1; then
   "
 fi
 
+if ! type herdr >/dev/null 2>&1; then
+  echo -e "
+  herdrをインストールします...
+  "
+  curl -fsSL https://herdr.dev/install.sh | sh
+fi
 
 if ! type peco >/dev/null 2>&1; then
   echo -e "
